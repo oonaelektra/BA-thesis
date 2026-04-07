@@ -1,0 +1,14 @@
+#!/bin/bash
+#SBATCH --job-name=spm_trainvocab_sv
+#SBATCH -o logs/log.%x_%j
+#SBATCH -e logs/error.%x_%j
+#SBATCH --account=project_xxxx
+#SBATCH --time=02:00:00
+#SBATCH --nodes=1
+#SBATCH --ntasks=1
+#SBATCH --cpus-per-task=1
+#SBATCH --mem=2G
+#SBATCH --partition=small
+
+spm_train --input=data/traindata/opensubtitles.train.en-sv.sv --model_prefix=models/spm.sv --vocab_size=32000 --character_coverage=1.0 --model_type=bpe --byte_fallback=true
+
