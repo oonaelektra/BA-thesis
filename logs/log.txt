@@ -1,0 +1,1 @@
+Log and error files of the slurmscripts can be directed here. Note that the scripts are specific to LUMI of CSC.
