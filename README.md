@@ -21,7 +21,7 @@ The repository is divided to subdirectories as follows:
     - run1 
 - scripts (tokenization and 11 different scripts that train a model, translate and evaluate)
 - translations 
-    -run1 
+    - run1 
 - Readme (for documentation)
 
 
