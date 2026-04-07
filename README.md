@@ -7,7 +7,7 @@ This repository contains the scripts and configuration files to study the impact
 This repository contains the scripts and configuration files needed to run the experiments, however not the data, as it can be downloaded from [OPUS](https://opus.nlpl.eu) with [OpusTools](https://github.com/Helsinki-NLP/OpusTools) or otherwise or the scripts can be applied to other data as well, in which case it is notable that the filenames do not make sense or work. The repository does however have a specific directory structure for data, such that all data used in the training process of the models, that is training data, validation data and vocabularies are in the same subdirectory for convenience as the files are cut, merged and otherwise processed and the data used for testing has its own subdirectory. 
 
 ### Requirements 
-Besides of OpusTools, other Python packages ([sentencepiece](https://pypi.org/project/sentencepiece/), [sacrebleu] (https://pypi.org/project/sacrebleu/)) and a [MarianNMT](https://marian-nmt.github.io) installation are needed to run the scripts. 
+Besides of OpusTools, other Python packages ([sentencepiece](https://pypi.org/project/sentencepiece/), [sacrebleu)(https://pypi.org/project/sacrebleu/)) and a [MarianNMT](https://marian-nmt.github.io) installation are needed to run the scripts. 
 
 ### Instructions
 The repository has the configuration files and scripts to train 11 different machine translation models. The pipeline needs some manual labour in the form of head and tail and other commands and is not 100% automated. 
