@@ -1,4 +1,4 @@
-# The Impact of Vocabulary Overlap on Knowledge Transfer in Multilingual Machine Translation
+# The Impact of Vocabulary Overlaps on Knowledge Transfer in Multilingual Machine Translation
 This repository contains the scripts and configuration files to study the impact of vocabulary overlap on knowledge transfer in multilingual machine translation by comparing joint and disjoint vocabularies and related and unrelated languages. The files in this repository are based on research on German as a source language, English as a target language and Swedish and Finnish as auxiliary languages with data from [Europarl](https://opus.nlpl.eu/datasets/Europarl) and [Opensubtitles2024](https://opus.nlpl.eu/datasets/OpenSubtitles). The scripts can however be applied to other languages and domains as well. In this readme, I briefly introduce the contents of this repository and the requirements to run the scripts successfully. 
 
 ## Requirements and Instructions
