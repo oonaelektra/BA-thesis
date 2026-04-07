@@ -26,16 +26,15 @@ The repository is divided to subdirectories as follows:
 
 
 ### Instructions
-The repository has the configuration files and scripts to train 11 different machine translation models. The pipeline needs some manual labour in the form of head and tail and other commands and is not 100% automated. 
-The steps to run the experiments successfully after cloning this repository and installing needed packages are as follows:
+The repository has the configuration files and scripts to train 11 different machine translation models. The pipeline needs some manual interference in the form of head, tail, sed and/or other suitable commands in order to run it as expoected. The steps to run the experiments successfully after cloning this repository and installing needed packages are as follows:
 - Download data to data/traindata and data/testdata
-- Make training and validation data files of the appropriate size for all languages 
-In the experiments of my thesis I used 1M lines of training data and 1000 lines of per language and on the source side and for target side I took their English counterparts but for the multilingual experiments where the models afre trained with only 1M lines total I split the training data in half to have 500K lines from auxiliary languages and 500K lines from source language. However, as these files are not needed for training the tokenizers or creating vocabularies they can be created later. Exact filenames used in this study can be found in the scripts, but the untokenized files are of the format: opensubtitles.train.aux-en.aux. 
+- Make training and validation data files of the appropriate size for all languages. 
+In the experiments of the thesis we used 1M lines of training data and 1000 lines of per language and on the source side and for target side we took their English counterparts but for the multilingual experiments where the models are trained with only 1M lines in total the data was split in half to have 500K lines from auxiliary language and 500K lines from source language. However, as these files are not needed for training the tokenizers or creating vocabularies they can be created later. Exact filenames used in this study can be found in the scripts, but the untokenized files used in the spmtrain scripts are of the format: opensubtitles.train.aux-en.aux. 
 - Train tokenizers with the spmtrain.* scripts.
 - Tokenize the data with the spmencode.* scripts
 - Prefix the auxiliary data for the disjoint and disjoint+unequal vocabulary experiments 
 - Merge the data to form multilingual training and validation data files and their English counterparts (again, check filenames in the scripts: traindata.auxde, traindata.disjoint.auxde... etc or modify them)
 - Use marian-vocab to extract vocabularies 
-- Use overlaps.py in analysis -folder to calculate and analyze the vocabulary overlaps 
+- Use overlaps.py in the analysis -folder to calculate and analyze the vocabulary overlaps 
 - Run the scripts with the model names (eg. "baseline.sh" and "desvjoint.sh") to train the models, translate and evaluate. For multiple runs, create multiple subdirectories (run2, run3...) in models and translations.
-- run the slurmscript.sh in analysis folder to compare translations with joint and disjoint vocabularies
+- run the slurmscript.sh in the analysis -folder to compare translations with joint and disjoint vocabularies.
